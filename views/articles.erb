@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List of Articles</title>
+    <link rel="stylesheet" href="articles.css">
+  </head>
+
+  <body>
+    <a href="articles/new">Submit new article.</a><br><br>
+    <hl>Articles:</hl>
+    <ul>
+      <% @texts.each do |text| %>
+        <li>Title: <%= text[0] %></li>
+        Description: <%= text[1] %><br>
+        URL: <a href="<%= text[2] %>"><%= text[2] %></a><br>
+
+        <br>
+      <% end %>
+    </ul>
+  </body>
+</html>
